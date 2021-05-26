@@ -1,7 +1,7 @@
-﻿using ExcelReport;
+﻿using System;
+using ExcelReport;
 using ExcelReport.Driver.NPOI;
 using ExcelReport.Renderers;
-using System;
 
 namespace _2.单行重复渲染示例
 {
@@ -18,7 +18,7 @@ namespace _2.单行重复渲染示例
                 ExportHelper.ExportToLocal(@"Template\Template.xls", "out.xls",
                         new SheetRenderer("学生名册",
                             new RepeaterRenderer<StudentInfo>("Roster", StudentLogic.GetList(),
-                                new ParameterRenderer<StudentInfo>("No1", t => num++),
+                                new ParameterRenderer<StudentInfo>("No", t => num++),
                                 new ParameterRenderer<StudentInfo>("Name", t => t.Name),
                                 new ParameterRenderer<StudentInfo>("Gender", t => t.Gender ? "男" : "女"),
                                 new ParameterRenderer<StudentInfo>("Class", t => t.Class),

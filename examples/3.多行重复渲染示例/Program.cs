@@ -1,7 +1,7 @@
-﻿using ExcelReport;
+﻿using System;
+using ExcelReport;
 using ExcelReport.Driver.NPOI;
 using ExcelReport.Renderers;
-using System;
 
 namespace _3.多行重复渲染示例
 {
@@ -31,8 +31,8 @@ namespace _3.多行重复渲染示例
             {
                 Console.WriteLine(e.Message);
             }
-
             Console.WriteLine("finished!");
+            Console.ReadKey();
         }
     }
 }

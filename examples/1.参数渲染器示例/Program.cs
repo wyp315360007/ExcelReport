@@ -1,8 +1,8 @@
-﻿using ExcelReport;
+﻿using System;
+using System.Drawing;
+using ExcelReport;
 using ExcelReport.Driver.NPOI;
 using ExcelReport.Renderers;
-using System;
-using System.Drawing;
 
 namespace _1.参数渲染器示例
 {
@@ -29,8 +29,8 @@ namespace _1.参数渲染器示例
             {
                 Console.WriteLine(e.Message);
             }
-
             Console.WriteLine("finished!");
+            Console.ReadKey();
         }
     }
 }
